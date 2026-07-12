@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+
+
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                        'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
+                        'slide-down': 'slideDown 0.3s ease-out',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { opacity: 0.6 },
+                            '50%': { opacity: 1 }
+                        },
+                        slideDown: {
+                            '0%': { transform: 'translateY(-10%)', opacity: 0 },
+                            '100%': { transform: 'translateY(0)', opacity: 1 }
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+
+
+    </script>
+</head>
+
+<style>
+  .brand-color{
+    background-color: #66217A;
+        color:#66217A
+  }
+
+  .black-brand{
+    background-color: #090C08;
+  }
+
+  .white-brand{
+    background-color: #FFFDF7;
+    color:#FFFDF7
+  }
+
+  .text-brand-color{
+    color:#66217A
+  }
+
+  .text-white_brand_color{
+    color:#FFFDF7
+  }
+
+
+
+ /* Brand Fonts */
+
+  .brand-font{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+</style>
+
+
+
+<body class="p-2 sm:p-4 white-brand">
+  <main class="max-w-6xl mx-auto px-4 black">
+
+
+
+    <!-- Mobile-Friendly Navbar -->
+    <nav x-data="{ isOpen: false }" class="relative overflow-hidden rounded-xl border border-blue-500/20">
+        <!-- Animated Background -->
+        <div class="absolute inset-0 brand-color  backdrop-blur-md"></div>
+
+        <!-- Main Navbar Content -->
+        <div class="relative px-4 sm:px-8 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3 group">
+                    <div class="relative">
+                        <!-- <div class="absolute inset-0 bg-blue-800 rounded-lg blur group-hover:blur-md transition-all duration-300"></div> -->
+                        <img src="bloxcologo1.png" width="32" height="32">
+
+                    </div>
+                    <span class="text-xl sm:text-2xl font-bold text-white brand-font">BloxNShop</span>
+                </div>
+
+                <!-- Right Side Buttons -->
+                <div class="flex items-center space-x-4">
+
+                    <!-- Mobile Menu Button -->
+
+
+                    
+                  <a href="google.com" class="inline-flex relative px-8 py-3 font-bold text-white rounded-lg group overflow-hidden hover:brightness-110 hover:-translate-x-[1px] hover:border-l-[0px] active:border-l-[2px] active:brightness-90 active:translate-y-[2px] duration-100">
+                  <!-- Glowing background effect -->
+                  <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-cyan-500 to-blue-500 opacity-70 blur-xl group-hover:opacity-100 transition-opacity duration-300"></span>
+                  
+                  <!-- Main button background -->
+                  <span class="absolute inset-0 w-full h-full white-brand"></span>
+                  
+                  <!-- Shine effect -->
+                  <!-- <span class="absolute inset-0 w-1/4 h-full brand-color opacity-50 skew-x-0 transform -translate-x-full group-hover:translate-x-[400%] transition-transform duration-1000"></span> -->
+                  
+                  <!-- Button text -->  
+                  <span class="relative flex items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#65207A" class="bi bi-controller" viewBox="0 0 16 16">
+                        <path d="M11.5 6.027a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m2.5-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m-6.5-3h1v1h1v1h-1v1h-1v-1h-1v-1h1z"/>
+                        <path d="M3.051 3.26a.5.5 0 0 1 .354-.613l1.932-.518a.5.5 0 0 1 .62.39c.655-.079 1.35-.117 2.043-.117.72 0 1.443.041 2.12.126a.5.5 0 0 1 .622-.399l1.932.518a.5.5 0 0 1 .306.729q.211.136.373.297c.408.408.78 1.05 1.095 1.772.32.733.599 1.591.805 2.466s.34 1.78.364 2.606c.024.816-.059 1.602-.328 2.21a1.42 1.42 0 0 1-1.445.83c-.636-.067-1.115-.394-1.513-.773-.245-.232-.496-.526-.739-.808-.126-.148-.25-.292-.368-.423-.728-.804-1.597-1.527-3.224-1.527s-2.496.723-3.224 1.527c-.119.131-.242.275-.368.423-.243.282-.494.575-.739.808-.398.38-.877.706-1.513.773a1.42 1.42 0 0 1-1.445-.83c-.27-.608-.352-1.395-.329-2.21.024-.826.16-1.73.365-2.606.206-.875.486-1.733.805-2.466.315-.722.687-1.364 1.094-1.772a2.3 2.3 0 0 1 .433-.335l-.028-.079zm2.036.412c-.877.185-1.469.443-1.733.708-.276.276-.587.783-.885 1.465a14 14 0 0 0-.748 2.295 12.4 12.4 0 0 0-.339 2.406c-.022.755.062 1.368.243 1.776a.42.42 0 0 0 .426.24c.327-.034.61-.199.929-.502.212-.202.4-.423.615-.674.133-.156.276-.323.44-.504C4.861 9.969 5.978 9.027 8 9.027s3.139.942 3.965 1.855c.164.181.307.348.44.504.214.251.403.472.615.674.318.303.601.468.929.503a.42.42 0 0 0 .426-.241c.18-.408.265-1.02.243-1.776a12.4 12.4 0 0 0-.339-2.406 14 14 0 0 0-.748-2.295c-.298-.682-.61-1.19-.885-1.465-.264-.265-.856-.523-1.733-.708-.85-.179-1.877-.27-2.913-.27s-2.063.091-2.913.27"/>
+                      </svg>
+                      <span class="tracking-wider text-brand-color brand-font">Play Now</span>
+                  </span>
+                  
+                  <!-- Border glow effect -->
+                  <!-- <span class="absolute inset-0 w-full h-full border border-white opacity-20 rounded-lg"></span> -->
+                </a>
+
+              </div>
+            </div>
+        </div>
+    </nav>
+
+<style>
+    .logophoto{
+         filter: blur(2px);
+    }
+</style>    
+
+    <div class="grid grid-cols-2 gap-4">
+      <div class="relative mt-6">
+          <img src="store_photo_1.png" alt="Background Image" class=" w-full object-cover rounded-xl">
+          <!-- <div class="absolute inset-0 bg-black bg-opacity-50"></div> -->
+      </div>
+
+      <div class="mt-6">
+
+
+      <div class="text-sm font-semibold tracking-wide text-gray-500 uppercase sm:text-base lg:text-sm xl:text-base">
+        BloxNShop Version 1.7
+      </div>
+      <h2
+        class=" text-4xl font-extrabold leading-10 tracking-tight text-gray-900 sm:leading-none sm:text-6xl lg:text-5xl xl:text-6xl">
+        #1 Asian Supermarket Roleplay
+      </h2>
+      <p class="mt-3 text-base text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+        
+      </p>
+      <div class=" sm:flex sm:justify-center lg:justify-start">
+        <div class="rounded-md shadow">
+
+          <a href="/docs">
+                  <button class="relative px-8 py-2 font-bold text-white rounded-lg group overflow-hidden hover:px-20 duration-150">
+                  <!-- Glowing background effect -->
+                  <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-cyan-500 to-blue-500 opacity-70 blur-xl group-hover:opacity-100 transition-opacity duration-300"></span>
+                  
+                  <!-- Main button background -->
+                  <span class="absolute inset-0 w-full h-full brand-color"></span>
+                  
+                  <!-- Shine effect -->
+                  <!-- <span class="absolute inset-0 w-1/4 h-full brand-color opacity-50 skew-x-0 transform -translate-x-full group-hover:translate-x-[400%] transition-transform duration-1000"></span> -->
+                  
+                  <!-- Button text -->  
+                  <span class="relative flex items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFFDF7" class="bi bi-controller" viewBox="0 0 16 16">
+                        <path d="M11.5 6.027a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m2.5-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m-6.5-3h1v1h1v1h-1v1h-1v-1h-1v-1h1z"/>
+                        <path d="M3.051 3.26a.5.5 0 0 1 .354-.613l1.932-.518a.5.5 0 0 1 .62.39c.655-.079 1.35-.117 2.043-.117.72 0 1.443.041 2.12.126a.5.5 0 0 1 .622-.399l1.932.518a.5.5 0 0 1 .306.729q.211.136.373.297c.408.408.78 1.05 1.095 1.772.32.733.599 1.591.805 2.466s.34 1.78.364 2.606c.024.816-.059 1.602-.328 2.21a1.42 1.42 0 0 1-1.445.83c-.636-.067-1.115-.394-1.513-.773-.245-.232-.496-.526-.739-.808-.126-.148-.25-.292-.368-.423-.728-.804-1.597-1.527-3.224-1.527s-2.496.723-3.224 1.527c-.119.131-.242.275-.368.423-.243.282-.494.575-.739.808-.398.38-.877.706-1.513.773a1.42 1.42 0 0 1-1.445-.83c-.27-.608-.352-1.395-.329-2.21.024-.826.16-1.73.365-2.606.206-.875.486-1.733.805-2.466.315-.722.687-1.364 1.094-1.772a2.3 2.3 0 0 1 .433-.335l-.028-.079zm2.036.412c-.877.185-1.469.443-1.733.708-.276.276-.587.783-.885 1.465a14 14 0 0 0-.748 2.295 12.4 12.4 0 0 0-.339 2.406c-.022.755.062 1.368.243 1.776a.42.42 0 0 0 .426.24c.327-.034.61-.199.929-.502.212-.202.4-.423.615-.674.133-.156.276-.323.44-.504C4.861 9.969 5.978 9.027 8 9.027s3.139.942 3.965 1.855c.164.181.307.348.44.504.214.251.403.472.615.674.318.303.601.468.929.503a.42.42 0 0 0 .426-.241c.18-.408.265-1.02.243-1.776a12.4 12.4 0 0 0-.339-2.406 14 14 0 0 0-.748-2.295c-.298-.682-.61-1.19-.885-1.465-.264-.265-.856-.523-1.733-.708-.85-.179-1.877-.27-2.913-.27s-2.063.091-2.913.27"/>
+                      </svg>
+                      <span class="tracking-wider text-white_brand_color brand-font">Play</span>
+                  </span>
+                  
+                  <!-- Border glow effect -->
+                  <!-- <span class="absolute inset-0 w-full h-full border border-white opacity-20 rounded-lg"></span> -->
+              </button>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+
+      </div>
+
+      
+
+
+<!-- <div class="relative h-auto w- pt-2 pl-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left"> -->
+
+
+
+<div class="mx-auto mb-4 text-center rounded-xl mt-6">
+    
+<dl class="grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-3 bg-white">
+        <div class="flex flex-col brand-color p-8">
+          <dt class="text-sm font-semibold leading-6 text-gray-300">Current Players</dt>
+          <dd class="order-first text-3xl font-semibold tracking-tight text-white" id="players"></dd>
+        </div>
+        <div class="flex flex-col brand-color p-8">
+          <dt class="text-sm font-semibold leading-6 text-gray-300">Visits</dt>
+          <dd class="order-first text-3xl font-semibold tracking-tight text-white" id="visits" ></dd>
+        </div>
+        <div class="flex flex-col brand-color p-8">
+          <dt class="text-sm font-semibold leading-6 text-gray-300">Favourites</dt>
+          <dd class="order-first text-3xl font-semibold tracking-tight text-white" id="likes" ></dd>
+        </div>
+        <!--<div class="flex flex-col brand-color p-8">-->
+        <!--  <dt class="text-sm font-semibold leading-6 text-gray-300">Total Hours</dt>-->
+        <!--  <dd class="order-first text-3xl font-semibold tracking-tight text-white"></dd>-->
+        <!--</div>-->
+      </dl>
+</div>
+
+    </section>
+
+<div class="h-32">
+  
+</div>
+
+
+<!-- Mobile-Friendly Navbar -->
+    <nav x-data="{ isOpen: false }" class="relative overflow-hidden rounded-xl border border-blue-500/20">
+        <!-- Animated Background -->
+        <div class="absolute inset-0 brand-color  backdrop-blur-md"></div>
+
+        <!-- Main Navbar Content -->
+        <div class="relative px-4 sm:px-8 py-4 flex items-center justify-between">
+            <p>&copy; 2026 BloxNShop. All rights reservered.</p>
+            
+            <div>
+                        <a href="https://discord.gg/ANeXy585TF" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#FFFFFF" class="bi bi-discord" viewBox="0 0 16 16">
+          <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
+        </svg>
+        </a>
+            </div>
+
+    </div>
+
+
+                <!-- Desktop Navigation
+                <div class="hidden md:flex items-center space-x-10">
+                    <a href="#" class="relative group">
+                        <span class="text-blue-100 group-hover:text-white transition-colors duration-300">Home</span>
+                        <div class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-400 group-hover:w-full transition-all duration-300"></div>
+                        <div class="absolute -bottom-1 left-0 w-0 h-0.5 bg-white/20 group-hover:w-full transition-all duration-500 delay-100"></div>
+                    </a>
+                    <a href="#" class="relative group">
+                        <span class="text-blue-100 group-hover:text-white transition-colors duration-300">Play</span>
+                        <div class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-400 group-hover:w-full transition-all duration-300"></div>
+                        <div class="absolute -bottom-1 left-0 w-0 h-0.5 bg-white/20 group-hover:w-full transition-all duration-500 delay-100"></div>
+                    </a>
+                    <a href="#" class="relative group">
+                        <span class="text-blue-100 group-hover:text-white transition-colors duration-300">Our Story</span>
+                        <div class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-400 group-hover:w-full transition-all duration-300"></div>
+                        <div class="absolute -bottom-1 left-0 w-0 h-0.5 bg-white/20 group-hover:w-full transition-all duration-500 delay-100"></div>
+                    </a>
+                </div> -->
+
+            </div>
+        </div>
+    </nav>
+
+  </main>
+
+    <!-- Alpine.js for mobile menu -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+
+
+
+
+
+<!-- 
+<footer class="flex flex-col space-y-10 justify-center brand-color w-full">
+<a>aaa</a> -->
+    <!-- <nav class="flex justify-center flex-wrap gap-6 text-gray-500 font-medium">
+        <a class="hover:text-gray-900" href="#">Home</a>
+        <a class="hover:text-gray-900" href="#">Play</a>
+        <a class="hover:text-gray-900" href="#">Our Story</a>
+    </nav> -->
+<!-- 
+    <div class="flex justify-center space-x-5">
+        <a href="https://discord.gg/ANeXy585TF" target="_blank" rel="noopener noreferrer">
+          
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#5865F2" class="bi bi-discord" viewBox="0 0 16 16">
+          <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
+        </svg>
+
+        </a>
+
+    </div>
+    <p class="text-center text-gray-700 font-medium">&copy; 2026 BloxNShop. All rights reservered.</p> -->
+<!-- </footer> -->
+
+
+
+<script>
+    
+const universeId = "5650985756";
+
+function formatNumber(num) {
+    if (num >= 1000000) {
+        return (num / 1000000).toFixed(1).replace(".0", "") + "M";
+    }
+
+    if (num >= 1000) {
+        return (num / 1000).toFixed(1).replace(".0", "") + "k";
+    }
+
+    return num;
+}
+
+fetch(`/api/game.php?universeId=${universeId}`)
+.then(response => {
+    console.log("Status:", response.status);
+    return response.json();
+})
+.then(data => {
+
+    console.log("Roblox data:", data);
+
+    const game = data.data[0];
+
+    document.getElementById("players").innerText = formatNumber(game.playing);
+    document.getElementById("visits").innerText = formatNumber(game.visits);
+    document.getElementById("likes").innerText = formatNumber(game.favoritedCount);
+
+})
+.catch(error => {
+    console.error(error);
+});
+</script>
+</body>
+</html>
