@@ -325,7 +325,7 @@ function formatNumber(num) {
     return num;
 }
 
-fetch(`/api/game.php?universeId=${universeId}`)
+fetch(`./game.php?universeId=${universeId}`)
 .then(response => {
     console.log("Status:", response.status);
     return response.json();
